@@ -108,6 +108,42 @@ a { color: inherit; }
 .nav-link { font-size: 14.5px; text-decoration: none; color: var(--ink); transition: color 0.15s ease; }
 .nav-link:hover { color: var(--teal); }
 
+.nav-trigger {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: 14.5px; color: var(--ink);
+  background: none; border: none; padding: 0; cursor: pointer;
+}
+.nav-trigger:hover, .nav-trigger.active { color: var(--teal); }
+.nav-trigger-icon { position: relative; width: 10px; height: 10px; flex: none; }
+.nav-trigger-icon::before, .nav-trigger-icon::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 10px; height: 1.5px; background: currentColor;
+  transition: transform 0.2s ease;
+}
+.nav-trigger-icon::before { transform: translate(-50%, -50%) rotate(0deg); }
+.nav-trigger-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.nav-trigger.active .nav-trigger-icon::before { transform: translate(-50%, -50%) rotate(45deg); }
+.nav-trigger.active .nav-trigger-icon::after { transform: translate(-50%, -50%) rotate(135deg); }
+
+.nav-dropdown {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+.nav-dd-grid {
+  max-width: var(--maxw); margin: 0 auto; padding: 28px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 32px;
+}
+.nav-dd-item { display: block; text-decoration: none; padding: 4px 0; }
+.nav-dd-title {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-weight: 600; font-size: 14.5px; color: var(--ink);
+}
+.nav-dd-arrow { font-size: 13px; opacity: 0.55; transition: transform 0.15s ease; }
+.nav-dd-item:hover .nav-dd-title { color: var(--teal); }
+.nav-dd-item:hover .nav-dd-arrow { transform: translateX(3px); }
+.nav-dd-desc { display: block; margin-top: 4px; font-size: 13px; line-height: 1.5; color: var(--body); }
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -270,5 +306,6 @@ a { color: inherit; }
   .grid6, .grid2, .dd-points { grid-template-columns: 1fr; }
   .grid6 .col-2, .grid6 .col-3 { grid-column: span 1; }
   .nav-links { gap: 16px; }
+  .nav-dd-grid { grid-template-columns: 1fr; padding: 20px 28px; gap: 18px; }
   .head-split { flex-direction: column; }
 }
