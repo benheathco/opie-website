@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav.jsx';
 import Hero from './components/Hero.jsx';
 import SolveSection from './components/SolveSection.jsx';
@@ -9,8 +10,11 @@ import Teams from './components/Teams.jsx';
 import Security from './components/Security.jsx';
 import FinalCTA from './components/FinalCTA.jsx';
 import Footer from './components/Footer.jsx';
+import NotFoundPage from './components/NotFoundPage.jsx';
+import PlatformPage from './pages/PlatformPage.jsx';
+import SolutionPage from './pages/SolutionPage.jsx';
 
-export default function App() {
+function Home() {
   return (
     <>
       <Nav />
@@ -25,5 +29,16 @@ export default function App() {
       <FinalCTA />
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/platform/:slug" element={<PlatformPage />} />
+      <Route path="/solutions/:slug" element={<SolutionPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
