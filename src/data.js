@@ -79,3 +79,104 @@ export const securityItems = [
   { h: 'Advanced encryption', t: 'Data encrypted at rest and in transit. Application-level encryption for sensitive fields using industrial-grade cryptography.', shot: 'encryption' },
   { h: 'Isolated storage', t: 'Vault files are stored separately from knowledge base content, with scoped organizational boundary enforcement.', shot: 'isolated storage' },
 ];
+
+export const platformPages = [
+  {
+    slug: 'vault',
+    navTitle: 'Vault',
+    navDesc: 'Secure document workspace for uploading, organising and analysing files.',
+    title: 'A secure vault for every document',
+    description:
+      "Opie's Vault is a cloud-native workspace for your organisation's files, backed by encrypted object storage. Upload, organise and analyse documents in one place, with every file scoped to the right team and project.",
+    bullets: [
+      { h: 'Encrypted storage', t: 'Files are stored in isolated, encrypted cloud storage, scoped per organisation.' },
+      { h: 'Instant analysis', t: 'Every upload is automatically processed and made searchable the moment it lands.' },
+      { h: 'Structured organisation', t: 'Folder-style navigation keeps documents mapped to the projects and entities they belong to.' },
+    ],
+    shot: 'vault workspace',
+  },
+  {
+    slug: 'workflows',
+    navTitle: 'Workflows',
+    navDesc: 'Automate multi-step compliance processes, orchestrated end to end.',
+    title: 'Compliance workflows that run themselves',
+    description:
+      'Workflows chain together every step of a compliance process — review, verification, sign-off — into a single automated pipeline, orchestrated so nothing falls through the cracks.',
+    bullets: [
+      { h: 'Multi-step orchestration', t: 'Each workflow runs as a durable, trackable pipeline from start to finish.' },
+      { h: 'Human sign-off built in', t: 'Route any step to a human reviewer before it moves forward.' },
+      { h: 'Full run history', t: 'See exactly what happened at every step, for every run, at any time.' },
+    ],
+    shot: 'workflow builder',
+  },
+  {
+    slug: 'compliance',
+    navTitle: 'Compliance',
+    navDesc: 'Manage customers, obligations and reports for KYC/AML and regulatory risk.',
+    title: 'One place for customers, obligations and reports',
+    description:
+      'The Compliance module brings customer records, regulatory obligations, and reporting together, with built-in KYC/AML checks so your team always knows where risk sits.',
+    bullets: [
+      { h: 'Customer risk profiles', t: 'Every customer record carries its verification status and risk tier.' },
+      { h: 'KYC/AML checks', t: 'Identity verification is built into onboarding, not bolted on afterwards.' },
+      { h: 'Audit-ready reporting', t: 'Generate obligation and risk reports without assembling them by hand.' },
+    ],
+    shot: 'compliance dashboard',
+  },
+  {
+    slug: 'playbooks',
+    navTitle: 'Playbooks',
+    navDesc: 'Reusable, rule-based action templates that drive compliance work automatically.',
+    title: 'Turn your compliance process into a playbook',
+    description:
+      'Playbooks are reusable, rule-based templates that trigger the right action automatically — recording a risk assessment, flagging a review, routing an approval — so the same process runs the same way every time.',
+    bullets: [
+      { h: 'Rule-based triggers', t: 'Actions fire automatically when the conditions you define are met.' },
+      { h: 'Consistent outcomes', t: 'The same playbook produces the same result, every time it runs.' },
+      { h: 'Reusable across teams', t: 'Build a playbook once and apply it across every entity or fund.' },
+    ],
+    shot: 'playbook editor',
+  },
+  {
+    slug: 'assistant',
+    navTitle: 'Opie Assistant',
+    navDesc: 'A multi-agent AI assistant with specialists for every compliance domain.',
+    title: 'An AI assistant with specialists on call',
+    description:
+      'Opie Assistant routes your questions to specialist agents — Policy Advisor, Regulatory Monitor, Document Analyser, Risk Assessor and Training Assistant — so you always get an answer grounded in the right domain.',
+    bullets: [
+      { h: 'Specialist agents', t: 'Dedicated agents for policy, regulation, document analysis, risk and training.' },
+      { h: 'Grounded answers', t: "Every response is backed by your own documents and data, not a generic model." },
+      { h: 'One conversation', t: 'Ask anything and Opie routes it to the right specialist behind the scenes.' },
+    ],
+    shot: 'assistant chat',
+  },
+  {
+    slug: 'tasks-calendar',
+    navTitle: 'Tasks & Calendar',
+    navDesc: 'Task management and deadline scheduling built for compliance work.',
+    title: 'Never miss a compliance deadline',
+    description:
+      "Tasks & Calendar keeps every to-do, review and regulatory deadline in one schedule, with system-generated tasks alongside the ones your team creates by hand.",
+    bullets: [
+      { h: 'System-generated tasks', t: 'Deadlines and follow-ups are created automatically from your workflows.' },
+      { h: 'Team scheduling', t: "See what's due, who owns it, and when it's due across the whole team." },
+      { h: 'Nothing falls through', t: 'Every obligation has an owner and a date, tracked to completion.' },
+    ],
+    shot: 'task calendar',
+  },
+];
+
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+export const solutionPages = teams.map((t) => ({
+  slug: slugify(t.name),
+  navTitle: t.name,
+  navDesc: t.desc,
+  title: t.name,
+  description: t.desc,
+}));
