@@ -14,10 +14,20 @@ export default function PlatformPage() {
   return (
     <FeaturePage
       eyebrow="Platform"
+      slug={page.slug}
+      lead={page.lead}
       title={page.title}
       description={page.description}
       bullets={page.bullets}
       shot={page.shot}
+      sections={page.sections}
+      metrics={page.metrics}
+      audiences={page.audiences}
+      highlights={page.highlights}
+      useCases={page.useCases}
+      useCasesTitle={page.useCasesTitle}
+      useCasesIntro={page.useCasesIntro}
+      cta={page.cta}
     />
   );
 }

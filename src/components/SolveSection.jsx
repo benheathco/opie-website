@@ -8,7 +8,7 @@ export default function SolveSection() {
         <h2 className="h2">Opie solves it all in one AI-driven workspace</h2>
         <p className="sub">
           Our Operational Intelligence Engine replaces manual compliance processes with
-          AI-powered workflows.
+          AI-powered automations.
         </p>
       </div>
       <div className="grid6">

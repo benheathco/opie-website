@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <h1 className="hero-h1">The compliance operations platform for regulated teams</h1>
         <p className="hero-sub">
-          Automate document-heavy workflows, enforce compliance &amp; maintain a complete
+          Automate document-heavy processes, enforce compliance &amp; maintain a complete
           audit trail, without any guesswork.
         </p>
         <div className="hero-cta">

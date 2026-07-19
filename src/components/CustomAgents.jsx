@@ -7,7 +7,7 @@ export default function CustomAgents() {
         <div className="agents-glow" />
         <div className="agents-text">
           <span className="eyebrow">Custom Agents</span>
-          <h2>Build your own agents for specialized workflows</h2>
+          <h2>Build your own agents for policy-driven automations</h2>
           <p>
             Define scope boundaries, retrieval rules, response formatting, compliance
             constraints, and tone. Deploy them alongside Opie's specialist teams or as
