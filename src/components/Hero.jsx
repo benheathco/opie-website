@@ -11,7 +11,7 @@ export default function Hero() {
         </p>
         <div className="hero-cta">
           <a className="btn-teal" href="#">
-            Sign up Free <span className="chevron">&rsaquo;</span>
+            Book a Demo <span className="chevron">&rsaquo;</span>
           </a>
         </div>
 

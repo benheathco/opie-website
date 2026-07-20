@@ -11,6 +11,7 @@ export default function FeaturePage({
   bullets,
   shot,
   sections = [],
+  splitFeatures = [],
   metrics = [],
   audiences = [],
   highlights = [],
@@ -56,7 +57,7 @@ export default function FeaturePage({
                   <p>{item.t}</p>
                 </div>
                 {item.items && item.items.length > 0 && (
-                  <div className="feature-highlight-list">
+                  <div className={`feature-highlight-list count-${Math.min(item.items.length, 3)}`}>
                     {item.items.map((child) => (
                       <div key={child.h} className="feature-highlight-item">
                         <h3>{child.h}</h3>
@@ -82,6 +83,33 @@ export default function FeaturePage({
           </div>
         )}
       </section>
+
+      {splitFeatures.length > 0 && (
+        <section className="section">
+          <div className="feature-split">
+            {splitFeatures.map((item, i) => (
+              <div key={item.h} className={`feature-split-row${i % 2 === 1 ? ' reverse' : ''}`}>
+                <Placeholder label={item.shot} variant="deep" className="feature-split-media" />
+                <div className="feature-split-copy">
+                  <span className="overview-kicker">{item.kicker}</span>
+                  <h2>{item.h}</h2>
+                  <p>{item.t}</p>
+                  {item.items && item.items.length > 0 && (
+                    <div className="feature-split-list">
+                      {item.items.map((child) => (
+                        <div key={child.h} className="feature-split-item">
+                          <h3>{child.h}</h3>
+                          <p>{child.t}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {(sections.length > 0 || metrics.length > 0) && (
         <section className="dark">

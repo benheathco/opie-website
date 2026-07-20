@@ -21,6 +21,7 @@ export default function SolutionPage() {
       bullets={page.bullets}
       shot={page.shot}
       sections={page.sections}
+      splitFeatures={page.splitFeatures}
       metrics={page.metrics}
       audiences={page.audiences}
       highlights={page.highlights}

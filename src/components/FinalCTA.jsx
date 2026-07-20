@@ -12,7 +12,7 @@ export default function FinalCTA() {
         </p>
         <div style={{ marginTop: 30 }}>
           <a className="btn-teal" href="#">
-            Sign up Free <span className="chevron">&rsaquo;</span>
+            Book a Demo <span className="chevron">&rsaquo;</span>
           </a>
         </div>
         <div className="cta-window">

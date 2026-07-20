@@ -207,30 +207,37 @@ export const platformPages = [
     title: 'One place for customers, obligations and reports',
     description:
       'The Compliance module brings customer records, regulatory obligations, and reporting together, with built-in KYC/AML checks so your team always knows where risk sits.',
-    sections: [
+    splitFeatures: [
       {
         kicker: 'Screen',
         h: 'Every customer starts with a risk profile',
         t: 'KYC/AML checks run at onboarding, not bolted on afterwards — every customer record carries its verification status and risk tier from day one.',
+        shot: 'customer risk profile',
+        items: [
+          { h: 'Customer risk profiles', t: 'Every customer record carries its verification status and risk tier.' },
+          { h: 'KYC/AML checks', t: 'Identity verification is built into onboarding, not bolted on afterwards.' },
+        ],
       },
       {
         kicker: 'Track',
         h: 'Obligations and reviews on one calendar',
         t: 'Daily, monthly, quarterly and annual obligations sit alongside suspicious matter reviews, each with an owner, a due date and an escalation path.',
+        shot: 'obligation calendar',
+        items: [
+          { h: 'Obligation calendar', t: 'Track daily, monthly, quarterly and annual obligations with owners, due dates and escalation.' },
+          { h: 'Suspicious matter review', t: 'Detect unusual client or transaction behaviour, draft review notes, and preserve the decision evidence.' },
+        ],
       },
       {
         kicker: 'Report',
         h: 'Multi-entity oversight, one audit trail',
         t: 'Work across every fund, licence and related entity from a single workspace, with reports and audit trails scoped per entity but reportable across the structure.',
+        shot: 'multi-entity audit trail',
+        items: [
+          { h: 'Multi-entity oversight', t: 'Work across every fund, licence and related entity from a single workspace, with audit trails scoped per entity.' },
+          { h: 'Audit-ready reporting', t: 'Generate obligation and risk reports without assembling them by hand.' },
+        ],
       },
-    ],
-    bullets: [
-      { h: 'Customer risk profiles', t: 'Every customer record carries its verification status and risk tier.' },
-      { h: 'KYC/AML checks', t: 'Identity verification is built into onboarding, not bolted on afterwards.' },
-      { h: 'Audit-ready reporting', t: 'Generate obligation and risk reports without assembling them by hand.' },
-      { h: 'Obligation calendar', t: 'Track daily, monthly, quarterly and annual obligations with owners, due dates and escalation.' },
-      { h: 'Suspicious matter review', t: 'Detect unusual client or transaction behaviour, draft review notes, and preserve the decision evidence.' },
-      { h: 'Multi-entity oversight', t: 'Work across every fund, licence and related entity from a single workspace, with audit trails scoped per entity.' },
     ],
     shot: 'compliance dashboard',
   },
@@ -292,30 +299,37 @@ export const platformPages = [
     title: 'Connect the tools your team already uses',
     description:
       'Opie integrates with communication, document, finance and operational systems so agents can work with real company context instead of isolated uploads. Pull evidence in, trigger automated runs, route approvals and keep records tied to the source system.',
-    sections: [
+    splitFeatures: [
       {
         kicker: 'Connect',
         h: 'Bring in the systems your team already uses',
         t: 'Documents, cloud drives, Slack, Teams, Gmail, Outlook, Xero and business apps feed real company context into vault, knowledge base and review automations.',
+        shot: 'connected systems',
+        items: [
+          { h: 'Documents and storage', t: 'Bring files from document stores and cloud drives into vault, knowledge base and review automations.' },
+          { h: 'Email and messaging', t: 'Use Slack, Teams, Gmail and Outlook context for tasks, approvals, follow-ups and company memory.' },
+        ],
       },
       {
         kicker: 'Trigger',
         h: 'Start automated runs from anywhere',
         t: 'A file upload, an inbound message, a due date or an agent decision can kick off a policy automation — not just a manual click.',
+        shot: 'automation triggers',
+        items: [
+          { h: 'Finance and operations', t: 'Connect systems like Xero and business apps so reconciliations, reports and reviews use current operational data.' },
+          { h: 'Process triggers', t: 'Start automated runs from app events, webhooks, uploaded files, messages, due dates or agent decisions.' },
+        ],
       },
       {
         kicker: 'Control',
         h: 'Every write-back needs a human first',
         t: 'Agents use connected tools through governed, permissioned access, and external systems only update after a person approves the change.',
+        shot: 'permissioned access',
+        items: [
+          { h: 'Permissioned access', t: 'Agents use connected tools through governed access, approval gates and audit records.' },
+          { h: 'Human-confirmed write-backs', t: 'External systems only update after a person approves the change.' },
+        ],
       },
-    ],
-    bullets: [
-      { h: 'Documents and storage', t: 'Bring files from document stores and cloud drives into vault, knowledge base and review automations.' },
-      { h: 'Email and messaging', t: 'Use Slack, Teams, Gmail and Outlook context for tasks, approvals, follow-ups and company memory.' },
-      { h: 'Finance and operations', t: 'Connect systems like Xero and business apps so reconciliations, reports and reviews use current operational data.' },
-      { h: 'Process triggers', t: 'Start automated runs from app events, webhooks, uploaded files, messages, due dates or agent decisions.' },
-      { h: 'Permissioned access', t: 'Agents use connected tools through governed access, approval gates and audit records.' },
-      { h: 'Human-confirmed write-backs', t: 'External systems only update after a person approves the change.' },
     ],
     shot: 'integrations hub',
   },
@@ -326,21 +340,33 @@ export const platformPages = [
     title: 'An AI assistant with specialists on call',
     description:
       'Opie Assistant routes your questions to specialist agents and grounds each answer in the right personal, workspace and curated knowledge sources.',
-    sections: [
+    highlights: [
       {
         kicker: 'Ask',
         h: 'One conversation, the right specialist',
         t: "Ask anything and Opie routes the question to the specialist agent for policy, regulation, document analysis, risk or training — no need to pick the right tool yourself.",
+        items: [
+          { h: 'Specialist agents', t: 'Dedicated agents for policy, regulation, document analysis, risk and training.' },
+          { h: 'One conversation', t: 'Ask anything and Opie routes it to the right specialist behind the scenes.' },
+        ],
       },
       {
         kicker: 'Ground',
         h: 'Answers backed by your own context',
         t: "Every response draws on the documents, notes and company knowledge the user is permitted to access — not a generic model's best guess.",
+        items: [
+          { h: 'Grounded answers', t: "Every response is backed by the documents, notes and company context the user is permitted to access." },
+          { h: 'Company context', t: 'Workspace knowledge bases let agents understand policies, playbooks, decisions and shared files without manual re-uploading.' },
+        ],
       },
       {
         kicker: 'Act',
         h: 'An answer can become the next step',
         t: "Any result from Assistant can turn into a task, an approval request or a playbook run, so the conversation doesn't stop at an answer.",
+        items: [
+          { h: 'Turns answers into action', t: 'Any result from Assistant can become a task, approval request or playbook run.' },
+          { h: 'Multi-provider', t: 'Run on OpenAI, Google Gemini, Anthropic Claude or Grok — switch models without rebuilding your setup.' },
+        ],
       },
     ],
     bullets: [
@@ -351,6 +377,16 @@ export const platformPages = [
       { h: 'Turns answers into action', t: 'Any result from Assistant can become a task, approval request or playbook run.' },
       { h: 'Multi-provider', t: 'Run on OpenAI, Google Gemini, Anthropic Claude or Grok — switch models without rebuilding your setup.' },
     ],
+    useCasesTitle: 'How teams use Assistant',
+    useCasesIntro: 'Each question routes to the specialist agent built for it, grounded in the documents and context already in Opie.',
+    useCases: [
+      { h: 'Policy questions', t: 'Ask what a policy requires and get an answer grounded in the actual policy document, not a guess.' },
+      { h: 'Regulatory questions', t: 'Ask what a regulation requires and get a cited answer instead of searching guidance manually.' },
+      { h: 'Document analysis', t: 'Ask Assistant to summarise or extract details from a document already in your workspace.' },
+      { h: 'Risk questions', t: 'Ask about a risk area and get an answer that draws on your own risk assessments and records.' },
+      { h: 'Training and onboarding', t: 'New team members ask Assistant instead of interrupting a colleague for the same recurring questions.' },
+      { h: 'Turning an answer into work', t: 'Take any Assistant answer and turn it into a task, approval request or playbook run without leaving the conversation.' },
+    ],
     shot: 'assistant chat',
   },
   {
@@ -360,30 +396,37 @@ export const platformPages = [
     title: 'Never miss a compliance deadline',
     description:
       "Tasks & Calendar keeps every to-do, review and regulatory deadline in one schedule, with system-generated tasks alongside the ones your team creates by hand.",
-    sections: [
+    splitFeatures: [
       {
         kicker: 'Assign',
         h: 'Every task has an owner from the start',
         t: "Deadlines and follow-ups are created automatically from your playbooks, alongside the tasks your team creates by hand — nothing starts unowned.",
+        shot: 'task ownership',
+        items: [
+          { h: 'System-generated tasks', t: 'Deadlines and follow-ups are created automatically from your playbooks.' },
+          { h: 'Nothing falls through', t: 'Every obligation has an owner and a date, tracked to completion.' },
+        ],
       },
       {
         kicker: 'Track',
         h: 'One calendar for every source',
         t: "Playbook steps, obligations and manual to-dos all land on the same schedule, so the team can see what's due and who owns it in one place.",
+        shot: 'team calendar',
+        items: [
+          { h: 'Team scheduling', t: "See what's due, who owns it, and when it's due across the whole team." },
+          { h: 'One calendar, every source', t: 'Playbook steps, obligations and manual to-dos all land on the same schedule.' },
+        ],
       },
       {
         kicker: 'Escalate',
         h: 'Exceptions get routed, not ignored',
         t: 'When something needs a human decision it routes to the right reviewer automatically, and overdue items escalate instead of quietly slipping past their due date.',
+        shot: 'escalation routing',
+        items: [
+          { h: 'Exceptions routed for approval', t: 'When something needs a human decision, it routes to the right reviewer automatically.' },
+          { h: 'Escalation, not silence', t: 'Overdue items escalate instead of quietly slipping past their due date.' },
+        ],
       },
-    ],
-    bullets: [
-      { h: 'System-generated tasks', t: 'Deadlines and follow-ups are created automatically from your playbooks.' },
-      { h: 'Team scheduling', t: "See what's due, who owns it, and when it's due across the whole team." },
-      { h: 'Nothing falls through', t: 'Every obligation has an owner and a date, tracked to completion.' },
-      { h: 'Exceptions routed for approval', t: 'When something needs a human decision, it routes to the right reviewer automatically.' },
-      { h: 'Escalation, not silence', t: 'Overdue items escalate instead of quietly slipping past their due date.' },
-      { h: 'One calendar, every source', t: 'Playbook steps, obligations and manual to-dos all land on the same schedule.' },
     ],
     shot: 'task calendar',
   },
@@ -397,27 +440,34 @@ export const solutionPages = [
     title: 'One workspace for every fund and entity',
     description:
       'Automate IM reviews, disclosure compliance, and document-heavy playbooks across multiple funds and entities, with every obligation and approval tracked back to the fund it belongs to.',
-    sections: [
+    splitFeatures: [
       {
         kicker: 'Review',
         h: 'Disclosure review with risk flags built in',
         t: 'Run Information Memorandum and PDS reviews with AI risk flags before distribution, so issues surface before a document goes out the door.',
+        shot: 'disclosure review',
+        items: [
+          { h: 'IM & disclosure review', t: 'Run Information Memorandum and PDS reviews with AI risk flags before distribution.' },
+        ],
       },
       {
         kicker: 'Manage',
         h: 'Every fund and entity, one workspace',
         t: 'Obligations, documents and playbooks stay organised across every fund and licence, with each item tracked back to the entity it belongs to.',
+        shot: 'multi-entity workspace',
+        items: [
+          { h: 'Multi-entity workspace', t: 'Manage obligations, documents and playbooks across every fund and licence from one place.' },
+        ],
       },
       {
         kicker: 'Report',
         h: 'Compliance reporting without the assembly',
         t: 'Generate compliance and investor reports directly from the same system of record, instead of rebuilding them from scratch each cycle.',
+        shot: 'investor reporting',
+        items: [
+          { h: 'Audit-ready reporting', t: 'Generate compliance and investor reports without assembling them by hand.' },
+        ],
       },
-    ],
-    bullets: [
-      { h: 'IM & disclosure review', t: 'Run Information Memorandum and PDS reviews with AI risk flags before distribution.' },
-      { h: 'Multi-entity workspace', t: 'Manage obligations, documents and playbooks across every fund and licence from one place.' },
-      { h: 'Audit-ready reporting', t: 'Generate compliance and investor reports without assembling them by hand.' },
     ],
     shot: 'fund compliance workspace',
   },
@@ -450,6 +500,11 @@ export const solutionPages = [
       { h: 'Reconciliation across sources', t: 'Compare and verify figures across documents before they go into a working paper.' },
       { h: 'Audit-ready working papers', t: 'Produce working papers in minutes, with every figure traceable back to its source.' },
     ],
+    metrics: [
+      { value: 'Bulk', label: 'statement and document extraction, not one file at a time' },
+      { value: 'Every', label: 'figure stays traceable back to its source document' },
+      { value: 'Fast', label: 'audit-ready working papers in minutes, not days' },
+    ],
     shot: 'reconciliation workspace',
   },
   {
@@ -459,27 +514,34 @@ export const solutionPages = [
     title: 'Legal research with cited answers and an audit trail',
     description:
       'Search legislation and case files instantly, with every answer cited back to the exact source section — accelerating research, not replacing a lawyer\'s judgement.',
-    sections: [
+    splitFeatures: [
       {
         kicker: 'Search',
         h: 'Legislation and case files, cited instantly',
         t: 'Search legislation and case files and get cited answers back in seconds, with every citation traceable to its exact source section.',
+        shot: 'legislation search',
+        items: [
+          { h: 'Instant legislation search', t: 'Search legislation and case files and get cited answers back in seconds.' },
+        ],
       },
       {
         kicker: 'Review',
         h: 'Contract review that shows its work',
         t: 'Extract key clauses, compare them against your standards, and cite every finding so a reviewer can verify it in seconds.',
+        shot: 'contract review',
+        items: [
+          { h: 'Contract review', t: 'Extract key clauses, compare against your standards, and cite every finding.' },
+        ],
       },
       {
         kicker: 'Approve',
         h: 'AI drafts and cites, lawyers decide',
         t: 'Opie accelerates research and keeps the evidence trail; your lawyers review and approve every output before it goes further.',
+        shot: 'lawyer review',
+        items: [
+          { h: 'Research, not replacement', t: 'AI drafts and cites; your lawyers review and approve every output.' },
+        ],
       },
-    ],
-    bullets: [
-      { h: 'Instant legislation search', t: 'Search legislation and case files and get cited answers back in seconds.' },
-      { h: 'Contract review', t: 'Extract key clauses, compare against your standards, and cite every finding.' },
-      { h: 'Research, not replacement', t: 'AI drafts and cites; your lawyers review and approve every output.' },
     ],
     shot: 'legal research workspace',
   },
@@ -490,27 +552,43 @@ export const solutionPages = [
     title: 'Everything a compliance officer needs to prove the process ran',
     description:
       'Maintain a complete audit trail and route every AI recommendation through human sign-off, so you can show a regulator, board, or auditor exactly what happened and why.',
-    sections: [
+    highlights: [
       {
         kicker: 'See',
         h: 'Every obligation, owner and due date',
         t: "See every obligation across the entities you're responsible for in one view, instead of chasing spreadsheets and inboxes for status.",
+        items: [
+          { h: 'Obligation visibility', t: 'See every obligation, owner and due date across the entities you are responsible for.' },
+        ],
       },
       {
         kicker: 'Approve',
         h: 'Nothing becomes a decision without you',
         t: 'Every AI recommendation routes through your review before it becomes a decision — sign-off is built into the process, not an afterthought.',
+        items: [
+          { h: 'Human sign-off, always', t: 'Every AI recommendation routes through your review before it becomes a decision.' },
+        ],
       },
       {
         kicker: 'Prove',
         h: 'One system of record for the next review',
         t: 'Evidence, approvals and completion history live in one place, so you can show a regulator, board or auditor exactly what happened and why.',
+        items: [
+          { h: 'Complete audit trail', t: 'Evidence, approvals and completion history live in one system of record.' },
+        ],
       },
     ],
     bullets: [
       { h: 'Complete audit trail', t: 'Evidence, approvals and completion history live in one system of record.' },
       { h: 'Human sign-off, always', t: 'Every AI recommendation routes through your review before it becomes a decision.' },
       { h: 'Obligation visibility', t: 'See every obligation, owner and due date across the entities you are responsible for.' },
+    ],
+    useCasesTitle: 'How compliance officers use Opie',
+    useCasesIntro: 'From daily obligation tracking to the next regulator review, everything stays in one system of record.',
+    useCases: [
+      { h: 'Daily obligation tracking', t: 'Start the day with a clear view of what is due, who owns it, and what is overdue.' },
+      { h: 'Reviewing AI recommendations', t: 'Every AI-generated recommendation waits for your sign-off before it becomes a decision.' },
+      { h: 'Preparing for an audit', t: 'Pull evidence, approvals and completion history from one system instead of assembling it from scratch.' },
     ],
     shot: 'compliance officer dashboard',
   },
@@ -543,6 +621,11 @@ export const solutionPages = [
       { h: 'Regulatory search', t: 'Answer AUSTRAC and regulator questions in seconds, with cited sources.' },
       { h: 'Permissioned by design', t: 'Every check and record is governed by per-user access controls.' },
     ],
+    metrics: [
+      { value: 'Scale', label: 'KYC/AML checks that hold up as customer volume grows' },
+      { value: 'Cited', label: 'every regulator answer traces back to its source' },
+      { value: 'Scoped', label: 'every check and record stays inside its access boundary' },
+    ],
     shot: 'financial institution risk workspace',
   },
   {
@@ -552,22 +635,38 @@ export const solutionPages = [
     title: 'Delegate repetitive work to specialist agent teams',
     description:
       'Delegate repetitive multi-step processes to specialist agent teams across every department, with every automated step tied back to the evidence it produced.',
-    sections: [
+    highlights: [
       {
         kicker: 'Delegate',
         h: 'Repetitive work goes to specialist agents',
         t: 'Route multi-step work to agents built for triage, research and review, freeing your team to focus on the exceptions that need judgement.',
+        items: [
+          { h: 'Delegate to specialist agents', t: 'Route repetitive multi-step work to agents built for triage, research and review.' },
+        ],
       },
       {
         kicker: 'Standardise',
         h: 'The same playbook, every department',
         t: 'Roll the same process out across every department or entity that runs it, instead of letting each team build its own version.',
+        items: [
+          { h: 'Cross-department playbooks', t: 'Standardise the same process across every department that runs it.' },
+        ],
       },
       {
         kicker: 'Evidence',
         h: 'Every automated step leaves a record',
         t: 'Every automated step stays linked to the record it produced, so the result is explainable long after it ran.',
+        items: [
+          { h: 'Evidence, not guesswork', t: 'Every automated step stays linked to the record it produced.' },
+        ],
       },
+    ],
+    useCasesTitle: 'How enterprise operations teams use Opie',
+    useCasesIntro: 'The same specialist agents and playbooks roll out across every department that needs them.',
+    useCases: [
+      { h: 'Cross-department triage', t: 'Route incoming requests to the right specialist agent instead of a shared inbox.' },
+      { h: 'Standardising a manual process', t: 'Turn a process one team runs well into a playbook every department can use.' },
+      { h: 'Explaining an automated decision', t: 'Trace any automated step back to the record it produced, months after it ran.' },
     ],
     bullets: [
       { h: 'Delegate to specialist agents', t: 'Route repetitive multi-step work to agents built for triage, research and review.' },

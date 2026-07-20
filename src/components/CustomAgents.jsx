@@ -14,7 +14,7 @@ export default function CustomAgents() {
             standalone tools for your team.
           </p>
           <a className="btn-teal" href="#">
-            Sign up Free <span className="chevron">&rsaquo;</span>
+            Book a Demo <span className="chevron">&rsaquo;</span>
           </a>
         </div>
         <div className="agents-media">

@@ -64,7 +64,7 @@ export default function Nav() {
           <a className="nav-link" href="#">Blog</a>
           <a className="nav-link" href="#">Contact</a>
           <a className="btn-teal sm" href="#">
-            Sign Up <span className="chevron">&rsaquo;</span>
+            Book a Demo <span className="chevron">&rsaquo;</span>
           </a>
         </div>
       </nav>
