@@ -1,4 +1,5 @@
 import Placeholder from './Placeholder.jsx';
+import LottiePlayer from './LottiePlayer.jsx';
 import { regItems } from '../data.js';
 
 export default function Regulatory() {
@@ -14,7 +15,11 @@ export default function Regulatory() {
       <div className="grid2">
         {regItems.map((r) => (
           <div key={r.h} className="reg-card">
-            <Placeholder label={r.shot} variant="deep" className="reg-media" />
+            {r.lottie ? (
+              <LottiePlayer path={r.lottie} className="reg-media" />
+            ) : (
+              <Placeholder label={r.shot} variant="deep" className="reg-media" />
+            )}
             <div className="reg-body">
               <h3>{r.h}</h3>
               <p>{r.t}</p>

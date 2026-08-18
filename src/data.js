@@ -2,18 +2,18 @@
 
 export const solveFeatures = [
   { title: 'Automated document processing', desc: 'Upload files in bulk, then extract, compare and verify key details in structured review tables.', shot: 'doc processing', span: 2 },
-  { title: "Search across your organisation's data", desc: 'Query notes, documents, policies and company data for structured answers with citations and full source traceability.', shot: 'search', span: 2 },
-  { title: 'Human-in-the-loop verifications', desc: 'Every AI recommendation is subject to human oversight, with complete audit trails into how decisions were reached.', shot: 'verifications', span: 2 },
+  { title: "Search across your organisation's data", desc: 'Query notes, documents, policies and company data for structured answers with citations and full source traceability.', shot: 'search', lottie: '/assets/lottie/search-org-data.json', span: 2 },
+  { title: 'Human-in-the-loop verifications', desc: 'Every AI recommendation is subject to human oversight, with complete audit trails into how decisions were reached.', shot: 'verifications', lottie: '/assets/lottie/human-in-the-loop-verification.json', span: 2 },
   { title: 'Run multi-entity playbooks', desc: 'Run policy-driven automations across multiple funds, licenses, legal entities and jurisdictions from a single workspace.', shot: 'playbooks', span: 3 },
   { title: 'Automate with integrations', desc: 'Search and seamlessly work with internal data across 50+ powerful integrations.', shot: 'integrations', span: 3 },
 ];
 
 export const bentoFeatures = [
-  { title: 'Work with all the best AI models within Opie', shot: 'model picker', span: 3 },
-  { title: 'Generate audit-ready compliance reports in seconds', shot: 'reports', span: 3 },
-  { title: 'Trustworthy results through grounded citations', shot: 'citations', span: 2 },
-  { title: 'Collaborative review tables analyse bulk files at once', shot: 'review tables', span: 2 },
-  { title: 'Shared notes and playbooks keep teams aligned', shot: 'collaboration', span: 2 },
+  { title: 'Work with all the best AI models within Opie', shot: 'model picker', img: '/assets/home/model-picker.png', span: 3 },
+  { title: 'Generate audit-ready compliance reports in seconds', shot: 'reports', img: '/assets/home/reports.png', span: 3 },
+  { title: 'Trustworthy results through grounded citations', shot: 'citations', img: '/assets/home/citations.png', span: 2 },
+  { title: 'Collaborative review tables analyse bulk files at once', shot: 'review tables', img: '/assets/home/review-tables.png', span: 2 },
+  { title: 'Shared notes and playbooks keep teams aligned', shot: 'collaboration', img: '/assets/home/collaboration.png', span: 2 },
 ];
 
 export const stats = [
@@ -64,9 +64,9 @@ export const deepDives = [
 
 export const regItems = [
   { h: 'Disclosure review', t: 'Ensure Information Memorandums and Product Disclosure Statements are compliant before distribution. AI Traffic Light identifies risk and routes for sign-off.', shot: 'disclosure review' },
-  { h: 'Regulatory search', t: 'Answer complex regulatory questions in seconds. Load legislation (AUSTRAC, SEC, FCA) and get cited sections with zero hallucinations.', shot: 'regulatory search' },
-  { h: 'Automated client onboarding', t: 'Automate identity verification across investor onboarding. Integrated KYC/AML checks with full context for failed or flagged verifications.', shot: 'client onboarding' },
-  { h: 'Multi-entity compliance', t: 'Run playbooks across multiple funds, licenses and jurisdictions from a single workspace. Audit trails scoped per entity, reportable across the structure.', shot: 'multi-entity' },
+  { h: 'Regulatory search', t: 'Answer complex regulatory questions in seconds. Load legislation (AUSTRAC, SEC, FCA) and get cited sections with zero hallucinations.', shot: 'regulatory search', lottie: '/assets/lottie/regulatory-search.json' },
+  { h: 'Automated client onboarding', t: 'Automate identity verification across investor onboarding. Integrated KYC/AML checks with full context for failed or flagged verifications.', shot: 'client onboarding', lottie: '/assets/lottie/client-onboarding.json' },
+  { h: 'Multi-entity compliance', t: 'Run playbooks across multiple funds, licenses and jurisdictions from a single workspace. Audit trails scoped per entity, reportable across the structure.', shot: 'multi-entity', lottie: '/assets/lottie/multi-entity-compliance.json' },
 ];
 
 export const teams = [

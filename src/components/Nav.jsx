@@ -61,6 +61,7 @@ export default function Nav() {
               <span className="nav-trigger-icon" aria-hidden="true" />
             </button>
           ))}
+          <Link className="nav-link" to="/customers">Customers</Link>
           <a className="nav-link" href="#">Blog</a>
           <a className="nav-link" href="#">Contact</a>
           <a className="btn-teal sm" href="#">

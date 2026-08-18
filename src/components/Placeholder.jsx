@@ -1,7 +1,20 @@
-// Swap these for real product imagery: replace <Placeholder/> with
+import Illustration, { pickScene } from './Illustration.jsx';
+
+// Product imagery slot. Renders a branded SVG illustration when the label
+// matches a scene in Illustration.jsx; otherwise falls back to the generic
+// mock window. Swap for real screenshots by replacing <Placeholder/> with
 // <img src="..." alt="..." className="..." /> wherever a shot appears.
 export default function Placeholder({ label, variant = 'light', className = '', style }) {
   const displayLabel = label || 'product workspace';
+
+  if (pickScene(displayLabel)) {
+    return (
+      <div className={`ph ph-${variant} ph-il ${className}`} style={style}>
+        <Illustration label={displayLabel} />
+      </div>
+    );
+  }
+
   const words = displayLabel.split(/\s+/).filter(Boolean).slice(0, 2);
 
   return (
