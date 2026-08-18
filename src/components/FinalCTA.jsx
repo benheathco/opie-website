@@ -1,5 +1,3 @@
-import Placeholder from './Placeholder.jsx';
-
 export default function FinalCTA() {
   return (
     <section className="dark">
@@ -16,7 +14,7 @@ export default function FinalCTA() {
           </a>
         </div>
         <div className="cta-window">
-          <Placeholder label="product workspace" variant="deep" />
+          <img src="/assets/home/product-workspace.png" alt="Opie product workspace" className="cta-shot" />
         </div>
       </div>
     </section>

@@ -13,6 +13,8 @@ import Footer from './components/Footer.jsx';
 import NotFoundPage from './components/NotFoundPage.jsx';
 import PlatformPage from './pages/PlatformPage.jsx';
 import SolutionPage from './pages/SolutionPage.jsx';
+import CustomersPage from './pages/CustomersPage.jsx';
+import CaseStudyPage from './pages/CaseStudyPage.jsx';
 
 function Home() {
   return (
@@ -38,6 +40,8 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/platform/:slug" element={<PlatformPage />} />
       <Route path="/solutions/:slug" element={<SolutionPage />} />
+      <Route path="/customers" element={<CustomersPage />} />
+      <Route path="/customers/:slug" element={<CaseStudyPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

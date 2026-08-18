@@ -1,4 +1,5 @@
 import Placeholder from './Placeholder.jsx';
+import LottiePlayer from './LottiePlayer.jsx';
 import { solveFeatures } from '../data.js';
 
 export default function SolveSection() {
@@ -19,7 +20,11 @@ export default function SolveSection() {
                 <h3 className="card-title">{f.title}</h3>
                 <p className="card-desc">{f.desc}</p>
               </div>
-              <Placeholder label={f.shot} className="card-media" />
+              {f.lottie ? (
+                <LottiePlayer path={f.lottie} className="card-media" />
+              ) : (
+                <Placeholder label={f.shot} className="card-media" />
+              )}
             </div>
           </div>
         ))}
