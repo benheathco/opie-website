@@ -18,19 +18,22 @@ export default function Teams() {
             </p>
           </div>
           <div className="teams-switch">
-            <div className="teams-tabs">
+            <div className="teams-tabs" role="group" aria-label="Choose a team">
               {teams.map((t, i) => (
                 <button
                   key={t.name}
+                  type="button"
+                  aria-pressed={i === active}
+                  aria-controls="team-description"
                   className={`team-tab${i === active ? ' active' : ''}`}
                   onClick={() => setActive(i)}
                 >
-                  <span className="team-arrow">&rarr;</span>
+                  <span className="team-arrow" aria-hidden="true">&rarr;</span>
                   {t.name}
                 </button>
               ))}
             </div>
-            <p className="team-desc">{teams[active].desc}</p>
+            <p className="team-desc" id="team-description" aria-live="polite">{teams[active].desc}</p>
           </div>
         </div>
       </div>

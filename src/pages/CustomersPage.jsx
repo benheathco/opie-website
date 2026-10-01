@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Nav from '../components/Nav.jsx';
-import Footer from '../components/Footer.jsx';
 import { caseStudies, industries } from '../caseStudies.js';
 
 export default function CustomersPage() {
@@ -10,7 +8,6 @@ export default function CustomersPage() {
 
   return (
     <>
-      <Nav />
       <section className="feature-hero-section customers-hero">
         <div className="customers-hero-inner">
           <span className="eyebrow">Customer stories</span>
@@ -23,13 +20,13 @@ export default function CustomersPage() {
       </section>
 
       <section className="section customers-index">
-        <div className="customers-filters" role="tablist" aria-label="Filter by industry">
+        <div className="customers-filters" role="group" aria-label="Filter by industry">
           {['All', ...industries].map((name) => (
             <button
               key={name}
               type="button"
-              role="tab"
-              aria-selected={filter === name}
+              aria-pressed={filter === name}
+              aria-controls="customer-results"
               className={`customers-filter${filter === name ? ' active' : ''}`}
               onClick={() => setFilter(name)}
             >
@@ -38,7 +35,8 @@ export default function CustomersPage() {
           ))}
         </div>
 
-        <div className="customers-grid">
+        <p className="sr-only" role="status">{visible.length} {visible.length === 1 ? 'story' : 'stories'} shown</p>
+        <div className="customers-grid" id="customer-results">
           {visible.map((c) => (
             <Link key={c.slug} to={`/customers/${c.slug}`} className="customer-card">
               <div className="customer-card-cover" style={{ backgroundImage: `url(${c.cover})` }}>
@@ -46,6 +44,7 @@ export default function CustomersPage() {
               </div>
               <div className="customer-card-body">
                 <span className="customer-card-industry">{c.industry}</span>
+                {c.fictional && <span className="customer-card-example">Illustrative example</span>}
                 <h2 className="customer-card-result">{c.result}</h2>
                 <p className="customer-card-summary">{c.summary}</p>
                 <span className="customer-card-link">
@@ -71,7 +70,6 @@ export default function CustomersPage() {
           </a>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
