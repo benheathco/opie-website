@@ -1,7 +1,4 @@
-import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Nav from '../components/Nav.jsx';
-import Footer from '../components/Footer.jsx';
 import Placeholder from '../components/Placeholder.jsx';
 import NotFoundPage from '../components/NotFoundPage.jsx';
 import { caseStudies, getCaseStudy } from '../caseStudies.js';
@@ -73,10 +70,6 @@ export default function CaseStudyPage() {
   const { slug } = useParams();
   const story = getCaseStudy(slug);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
   if (!story) return <NotFoundPage />;
 
   const index = caseStudies.indexOf(story);
@@ -85,7 +78,6 @@ export default function CaseStudyPage() {
 
   return (
     <>
-      <Nav />
       <article className="cs">
         <header className="feature-hero-section cs-hero">
           <div className="cs-hero-inner">
@@ -158,8 +150,6 @@ export default function CaseStudyPage() {
 
           <CtaStrip />
 
-          <AboutBlock story={story} />
-
           <nav className="cs-pager" aria-label="More customer stories">
             <Link to={`/customers/${prev.slug}`} className="cs-pager-link">
               <span className="cs-pager-dir">&lsaquo; Previous</span>
@@ -173,7 +163,6 @@ export default function CaseStudyPage() {
           </nav>
         </div>
       </article>
-      <Footer />
     </>
   );
 }

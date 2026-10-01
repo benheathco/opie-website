@@ -1,10 +1,11 @@
 import { Logo } from './Nav.jsx';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <Logo light />
+        <Link to="/" aria-label="Opie home"><Logo light /></Link>
         <div className="footer-links">
           <a href="#">Blog</a>
           <a href="#">Contact</a>

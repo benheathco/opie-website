@@ -1,5 +1,3 @@
-import Nav from './Nav.jsx';
-import Footer from './Footer.jsx';
 import Placeholder from './Placeholder.jsx';
 
 export default function FeaturePage({
@@ -24,7 +22,6 @@ export default function FeaturePage({
 
   return (
     <>
-      <Nav />
       <section className={`feature-hero-section ${pageClass}`}>
         <div className="feature-hero-grid">
           <div className="feature-hero-copy">
@@ -45,7 +42,7 @@ export default function FeaturePage({
         </div>
       </section>
 
-      <section className="section feature-page">
+      {(highlights.length > 0 || bullets?.length > 0) && <section className="section feature-page">
 
         {highlights.length > 0 && (
           <div className="feature-highlights">
@@ -82,7 +79,7 @@ export default function FeaturePage({
             ))}
           </div>
         )}
-      </section>
+      </section>}
 
       {splitFeatures.length > 0 && (
         <section className="section">
@@ -192,7 +189,6 @@ export default function FeaturePage({
         </section>
       )}
 
-      <Footer />
     </>
   );
 }

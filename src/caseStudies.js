@@ -14,9 +14,10 @@ export const industries = [
   'Financial institutions',
 ];
 
-export const caseStudies = [
+const storyEntries = [
   {
     slug: 'todo-customer',
+    draft: true,
     featured: true,
     fictional: false,
     name: 'TODO: Customer name',
@@ -309,6 +310,8 @@ export const caseStudies = [
     },
   },
 ];
+
+export const caseStudies = storyEntries.filter((story) => !story.draft);
 
 export function getCaseStudy(slug) {
   return caseStudies.find((c) => c.slug === slug) || null;

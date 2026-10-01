@@ -1,16 +1,12 @@
 import { Link } from 'react-router-dom';
-import Nav from './Nav.jsx';
-import Footer from './Footer.jsx';
 
 export default function NotFoundPage() {
   return (
-    <>
-      <Nav />
-      <div className="section head-center">
+      <section className="section head-center not-found">
+        <span className="eyebrow">404</span>
         <h1 className="h2">Page not found</h1>
-        <p className="sub"><Link to="/">Back to home</Link></p>
-      </div>
-      <Footer />
-    </>
+        <p className="sub">This page may have moved, or the address may be incorrect.</p>
+        <Link className="btn-teal" to="/">Back to home</Link>
+      </section>
   );
 }
