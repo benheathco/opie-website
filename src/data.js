@@ -70,13 +70,77 @@ export const regItems = [
 ];
 
 export const teams = [
-  { name: 'Investment funds', desc: 'Automate IM reviews, disclosure compliance, and document-heavy playbooks across multiple funds and entities.' },
-  { name: 'Accountants & advisors', desc: 'Extract figures from statements, reconcile across sources, and produce audit-ready working papers in minutes.' },
-  { name: 'Legal teams', desc: 'Search legislation and case files instantly, with every answer cited back to the exact source section.' },
-  { name: 'Compliance officers', desc: 'Maintain a complete audit trail and route every AI recommendation through human sign-off.' },
-  { name: 'Financial institutions', desc: 'Run KYC/AML checks and regulatory search at scale, governed by per-user permission controls.' },
-  { name: 'Enterprise operations', desc: 'Delegate repetitive multi-step processes to specialist agent teams across every department.' },
+  {
+    name: 'Investment funds',
+    icon: 'funds',
+    desc: 'Automate IM reviews, disclosure compliance, and document-heavy playbooks across multiple funds and entities.',
+    sources: ['Fund documents', 'Disclosures', 'Entity records'],
+    workflow: 'A clearer view of every fund',
+    output: 'Multi-entity review',
+    checks: ['IM disclosures reviewed', 'Findings linked to sources', 'Ready for your sign-off'],
+  },
+  {
+    name: 'Accountants & advisors',
+    icon: 'accounts',
+    desc: 'Extract figures from statements, reconcile across sources, and produce audit-ready working papers in minutes.',
+    sources: ['Statements', 'Source records', 'Working papers'],
+    workflow: 'From figures to confidence',
+    output: 'Reconciliation review',
+    checks: ['Figures extracted', 'Sources reconciled', 'Working papers prepared'],
+  },
+  {
+    name: 'Legal teams',
+    icon: 'legal',
+    desc: 'Search legislation and case files instantly, with every answer cited back to the exact source section.',
+    sources: ['Legislation', 'Case files', 'Legal notes'],
+    workflow: 'Every answer, grounded in evidence',
+    output: 'Source-linked research',
+    checks: ['Relevant sections found', 'Citations linked to answers', 'Ready for legal review'],
+  },
+  {
+    name: 'Compliance officers',
+    icon: 'compliance',
+    desc: 'Maintain a complete audit trail and route every AI recommendation through human sign-off.',
+    sources: ['Policies', 'Obligations', 'Evidence'],
+    workflow: 'Oversight at every step',
+    output: 'Compliance review',
+    checks: ['Obligations mapped', 'Evidence trail preserved', 'Routed for human sign-off'],
+  },
+  {
+    name: 'Financial institutions',
+    icon: 'institution',
+    desc: 'Run KYC/AML checks and regulatory search at scale, governed by per-user permission controls.',
+    sources: ['Client records', 'KYC documents', 'Regulations'],
+    workflow: 'Bring clarity to client checks',
+    output: 'Client onboarding review',
+    checks: ['Identity checks run', 'Exceptions surfaced', 'Ready for an authorised reviewer'],
+  },
+  {
+    name: 'Enterprise operations',
+    icon: 'operations',
+    desc: 'Delegate repetitive multi-step processes to specialist agent teams across every department.',
+    sources: ['Team knowledge', 'Playbooks', 'Connected tools'],
+    workflow: 'Keep every team moving together',
+    output: 'Coordinated workflows',
+    checks: ['Tasks routed to agents', 'Playbooks coordinated', 'Handoffs ready for your team'],
+  },
 ];
+
+export const researchIntelligence = {
+  eyebrow: 'Research & intelligence',
+  title: 'Your documents. A deeper understanding.',
+  description: 'Turn documents and team knowledge into a searchable foundation for research. Find the relevant detail, connect what you know, and follow findings back to their sources.',
+  features: [
+    { title: 'Make your documents discoverable', description: 'Index document content so Opie can find relevant passages across your files and bring them into your research.' },
+    { title: 'Build on shared knowledge', description: 'Bring knowledge bases, vault documents and team notes into your research, with access governed by your permissions.' },
+    { title: 'Keep the source in sight', description: 'Ask questions in plain language, explore cited findings, and return to the original material to verify the detail.' },
+  ],
+  sources: [
+    { title: 'Supplier report', type: 'PDF', location: 'Supplier report · Procurement', excerpt: 'A significant share of critical components comes from a single supplier. Alternative sourcing is under review.' },
+    { title: 'Risk policy', type: 'DOC', location: 'Risk policy · Supplier oversight', excerpt: 'Material supplier dependencies require a documented risk assessment and approval before sign-off.' },
+    { title: 'Review notes', type: 'NOTE', location: 'Review notes · Next steps', excerpt: 'Compare the supplier findings with the current risk policy, then take the assessment to the team for review.' },
+  ],
+};
 
 export const securityItems = [
   { h: 'Advanced encryption', t: 'Data encrypted at rest and in transit. Application-level encryption for sensitive fields using industrial-grade cryptography.', shot: 'encryption' },
