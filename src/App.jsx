@@ -10,6 +10,7 @@ import DeepDives from './components/DeepDives.jsx';
 import CustomAgents from './components/CustomAgents.jsx';
 import Regulatory from './components/Regulatory.jsx';
 import Teams from './components/Teams.jsx';
+import ResearchIntelligence from './components/ResearchIntelligence.jsx';
 import Security from './components/Security.jsx';
 import FinalCTA from './components/FinalCTA.jsx';
 import Footer from './components/Footer.jsx';
@@ -29,6 +30,7 @@ function Home() {
       <CustomAgents />
       <Regulatory />
       <Teams />
+      <ResearchIntelligence />
       <Security />
       <FinalCTA />
     </>
